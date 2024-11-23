@@ -2,30 +2,20 @@
 using namespace std;
 
 int main() {
-  int n, a;
-  cin >> n >> a;
+  string S;
+  cin >> S;
 
-  for (int i = 1; i <= n; i++) {
-    string op;
-    int b;
-    cin >> op >> b;
+  // 計算結果を保持する変数
+  int answer = 1;
 
-    if (op == "/" && b == 0) {
-      cout << "error" << endl;
-
-      return 0;
+  for (int i = 0; i < S.size(); i++) {
+    if (S.at(i) == '+') {
+      answer++;
     }
-
-    if (op == "+") {
-      a = a + b;
-    } else if (op == "-") {
-      a = a - b;
-    } else if (op == "*") {
-      a = a * b;
-    } else if (op == "/") {
-      a = a / b;
+    if (S.at(i) == '-') {
+      answer--;
     }
-
-    cout << i << ":" << a << endl;
   }
+
+  cout << answer << endl;
 }
