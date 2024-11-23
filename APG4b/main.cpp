@@ -2,29 +2,30 @@
 using namespace std;
 
 int main() {
-  int A, B;
-  cin >> A >> B;
+  int n, a;
+  cin >> n >> a;
 
-  // ここにプログラムを追記
-  int i = 0;
-  string result = "A:";
+  for (int i = 1; i <= n; i++) {
+    string op;
+    int b;
+    cin >> op >> b;
 
-  while (i < A) {
-    result.push_back(']');
+    if (op == "/" && b == 0) {
+      cout << "error" << endl;
 
-    i++;
+      return 0;
+    }
+
+    if (op == "+") {
+      a = a + b;
+    } else if (op == "-") {
+      a = a - b;
+    } else if (op == "*") {
+      a = a * b;
+    } else if (op == "/") {
+      a = a / b;
+    }
+
+    cout << i << ":" << a << endl;
   }
-
-  cout << result << endl;
-
-  i = 0;
-  result = "B:";
-
-  while (i < B) {
-    result.push_back(']');
-
-    i++;
-  }
-
-  cout << result << endl;
 }
