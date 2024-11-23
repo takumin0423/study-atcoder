@@ -2,20 +2,20 @@
 using namespace std;
 
 int main() {
-  int p;
-  cin >> p;
+  int x, a, b;
+  cin >> x >> a >> b;
 
-  // パターン2
-  if (p == 2) {
-    string text;
-    cin >> text;
+  // 1.の出力
+  x++;
+  cout << x << endl;
 
-    cout << text << "!" << endl;
-  }
+  // ここにプログラムを追記
+  x *= (a + b);
+  cout << x << endl;
 
-  int price, N;
+  x *= x;
+  cout << x << endl;
 
-  cin >> price >> N;
-
-  cout << price * N << endl;
+  x--;
+  cout << x << endl;
 }
