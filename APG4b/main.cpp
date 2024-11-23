@@ -2,8 +2,19 @@
 using namespace std;
 
 int main() {
-  int a, b;
-  cin >> a >> b;
+  int A, B;
+  string op;
+  cin >> A >> op >> B;
 
-  cout << a + b << endl;
+  if (op == "+") {
+    cout << A + B << endl;
+  } else if (op == "-") {
+    cout << A - B << endl;
+  } else if (op == "*") {
+    cout << A * B << endl;
+  } else if (op == "/" && B != 0) {
+    cout << A / B << endl;
+  } else {
+    cout << "error" << endl;
+  }
 }
