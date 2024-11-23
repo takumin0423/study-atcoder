@@ -2,20 +2,29 @@
 using namespace std;
 
 int main() {
-  int x, a, b;
-  cin >> x >> a >> b;
-
-  // 1.の出力
-  x++;
-  cout << x << endl;
+  int A, B;
+  cin >> A >> B;
 
   // ここにプログラムを追記
-  x *= (a + b);
-  cout << x << endl;
+  int i = 0;
+  string result = "A:";
 
-  x *= x;
-  cout << x << endl;
+  while (i < A) {
+    result.push_back(']');
 
-  x--;
-  cout << x << endl;
+    i++;
+  }
+
+  cout << result << endl;
+
+  i = 0;
+  result = "B:";
+
+  while (i < B) {
+    result.push_back(']');
+
+    i++;
+  }
+
+  cout << result << endl;
 }
